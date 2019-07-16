@@ -1,0 +1,30 @@
+<div class="search-users">
+    <div class="search-users-text"> Search Users</div>
+    <div>
+    <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="username">
+    </div>
+</div>
+<div class="card text-center">
+        <div class="card-body" >
+            <div class="users"  *ngFor="let user of pageOfItems | filter:searchText">
+                <div class="users-avatar">
+                <div>
+                <img src="{{user.avatar_url}}" alt="">
+                </div>
+                <div>{{user.login}}</div>
+                </div>
+                <div>
+                    <ul>
+                        <li><a routerLink="/user/{{user.login}}">View Details</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://github.com/{{user.login}}">Open in Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer pb-0 pt-3">
+            <jw-pagination [items]="users" (changePage)="onChangePage($event)" class="pagination"></jw-pagination>
+        </div>
+</div>
+

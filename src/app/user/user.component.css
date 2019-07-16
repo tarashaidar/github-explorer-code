@@ -1,0 +1,86 @@
+.user-card {
+  width: 90%;
+  height: 80vh;
+  border: 1px solid rgb(22, 22, 22);
+  margin: 38px auto;
+}
+.user-card-header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.user-avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+.user-card-header-username {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 5px;
+  flex: 3;
+}
+.user-card-header-user_url, .repo-url {
+  padding: 5px;
+  font-size: 14px;
+  flex: 1;
+  text-align: right;
+  color: black;
+  text-decoration: none;
+}
+
+.user-card-header-user_url:active{
+    color: blue;
+}
+
+.user-card-wrapper {
+ display: flex;
+ align-items: center;
+ flex-wrap: nowrap;
+}
+.user-card-info {
+  height: 200px;
+  width: 90wh;
+	list-style-type: none;
+	flex-basis: 95%;
+}
+
+.user-card-info-item {
+  margin: 10px 200px 10px 20px;
+  height: 30px;	
+	border-bottom: 1px solid rgb(175, 168, 168);
+}
+.img-wraper {
+  height: 200px;
+  flex-basis: 10%;
+  max-width: 80px;
+}
+.user-card-info-img {
+  margin: 10px 0 0 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.repos-header {
+	margin: 20px;
+	font-size: 16px;
+	display: block;
+	border-bottom: 1px solid black
+}
+
+.user-card-repos{
+  width: 98%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.user-card-repos .repository{
+  margin-right: 8px;
+}
