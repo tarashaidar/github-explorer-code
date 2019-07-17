@@ -25,39 +25,10 @@ export class UserComponent implements OnInit, OnDestroy {
     this.subscription2 = this.httpService.getRepos(userName).subscribe( 
       repos => this.userRepos = repos,
       error => {this.error = error.message; console.log(error);});
-
-      this.sendUser();
   }
 
   ngOnDestroy(){
     this.subscription1.unsubscribe();
     this.subscription2.unsubscribe();
   }
-
-  sendUser(){
-    return {
-      avatar: this.userCard.avatar_url,
-      name: this.userCard.name,
-      login: this.userCard.login,
-      created_at: this.userCard.created_at,
-      location: this.userCard.location,
-      company: this.userCard.company,
-      email: this.userCard.email
-    }
-  }
-
-
-}
-
-
-
-
-
-
-
-
-
-
-   
-
 
