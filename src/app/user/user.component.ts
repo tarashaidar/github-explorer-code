@@ -9,7 +9,15 @@ import { ActivatedRoute } from '@angular/router';
   providers: [SearchService]
 })
 export class UserComponent implements OnInit, OnDestroy {
-  userCard;
+  userCard: {} = {
+    avatar: ``,
+    name: ``,
+    login: ``,
+    created_at: "",
+    location: ``,
+    company: ``,
+    email: ``
+  };
   userRepos;
   error:any;
   subscription1;
@@ -31,4 +39,3 @@ export class UserComponent implements OnInit, OnDestroy {
     this.subscription1.unsubscribe();
     this.subscription2.unsubscribe();
   }
-
